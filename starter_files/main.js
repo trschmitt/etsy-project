@@ -42,7 +42,7 @@ function question2 () {
 function question3 () {
   // Answer:
   for (let i = 0; i < data.length; i++) {
-    if (data[i].currency_code == "GBP") {
+    if (data[i].currency_code === "GBP") {
       console.log(data[i].title + " costs " + data[i].price + " pounds.");
     }
   }
@@ -53,7 +53,9 @@ function question3 () {
 function question4 () {
   // Answer:
   for (let i = 0; i < data.length; i++) {
-    data[i]
+    if (data[i].materials == "wood") {
+      console.log(data[i].title + " is made of wood.");
+    }
   }
 }
 
