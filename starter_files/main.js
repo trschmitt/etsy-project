@@ -42,8 +42,8 @@ function question2 () {
 function question3 () {
   // Answer:
   for (let i = 0; i < data.length; i++) {
-    if (data[i].currency_code = "USD") {
-      console.log(data[i].title + " costs " + data[i].price + " dollars.");
+    if (data[i].currency_code == "GBP") {
+      console.log(data[i].title + " costs " + data[i].price + " pounds.");
     }
   }
 }
