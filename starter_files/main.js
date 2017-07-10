@@ -63,12 +63,15 @@ function question4 () {
 //    Display the name, number of items and the items it is made of.
 function question5 () {
   // Answer:
-  let productsMaterials = []
+  // let products = []
   for (let t = 0; t < data.length; t++) {
-    productsMaterials = data[t]
-    if (productsMaterials.materials.length >= 8) {
-      console.log(productsMaterials.title + " materials are as follows:");
-      console.log("- " + productsMaterials.materials );
+    let products = data[t];
+
+    if (products.materials.length >= 8) {
+      console.log(products.title + " has " + products.materials.length + "materials are as follows:");
+      products.materials.forEach(function(materials) {
+        console.log("- " + materials)
+      });
     }
   }
 }
