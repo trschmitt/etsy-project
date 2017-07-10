@@ -14,8 +14,8 @@ function question1 () {
   for (let i = 0; i < data.length; i++) {
     sum += data[i].price;
   }
-  average = sum / 25;
-  console.log("The average price is " + "$" + average + ".");
+  average = sum / data.length;
+  console.log("The average price is " + "$" + Math.floor(average) + ".");
 }
 
 
@@ -51,18 +51,28 @@ function question3 () {
 function question4 () {
   // Answer:
   for (let i = 0; i < data.length; i++) {
-    if (data[i].materials[i] === "wood") {
+      if (data[i].materials.includes("wood")) {
       console.log(data[i].title + " is made with wood.");
     }
   }
 }
 
 
+
 // 5: Which items are made of eight or more materials?
 //    Display the name, number of items and the items it is made of.
 function question5 () {
   // Answer:
+  let productsMaterials = []
+  for (let t = 0; t < data.length; t++) {
+    productsMaterials = data[t]
+    if (productsMaterials.materials.length >= 8) {
+      console.log(productsMaterials.title + " materials are as follows:");
+      console.log("- " + productsMaterials.materials );
+    }
+  }
 }
+
 
 
 // 6: How many items were made by their sellers?
