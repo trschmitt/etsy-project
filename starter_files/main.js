@@ -29,11 +29,9 @@ function question2 () {
       items.push(data[i]);
     }
   }
-  console.log(items[0].title);
-  console.log(items[1].title);
-  console.log(items[2].title);
-  console.log(items[3].title);
-  console.log(items[4].title);
+  for (var i = 0; i < items.length; i++) {
+    console.log(items[i].title);
+  }
 }
 
 
@@ -53,8 +51,8 @@ function question3 () {
 function question4 () {
   // Answer:
   for (let i = 0; i < data.length; i++) {
-    if (data[i].materials == "wood") {
-      console.log(data[i].title + " is made of wood.");
+    if (data[i].materials[i] === "wood") {
+      console.log(data[i].title + " is made with wood.");
     }
   }
 }
@@ -71,4 +69,11 @@ function question5 () {
 // Answer:
 function question6 () {
   // Answer:
+  let numItems = []
+  for (var i = 0; i < data.length; i++) {
+    if (data[i].who_made === "i_did" ) {
+      numItems.push(data[i].who_made)
+    }
+  }
+  console.log( numItems.length + " items were made by their sellers.");
 }
